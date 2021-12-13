@@ -2,7 +2,8 @@ mod utility;
 mod solutions;
 
 fn main() {
-    let dataset = utility::load_dataset::<u64>("input.txt");
-    let result = solutions::day_01::calculate_depth_3_optimized(dataset);
+    let dataset = utility::load_dataset::<String>("input_day2.txt");
+    let result = solutions::day_02::calculate_aim_path(dataset.iter().map(String::as_str).collect()).unwrap();
+
     println!("Result: {}", result);
 }
